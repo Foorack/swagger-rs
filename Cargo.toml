@@ -38,14 +38,6 @@ hyper_0_10 = {package = "hyper", version = "0.10", default-features = false, opt
 mime_multipart = {version = "0.5", optional = true}
 mime_0_2 = { package = "mime", version = "0.2.6", optional = true }
 
-[target.'cfg(not(any(target_os = "macos", target_os = "windows", target_os = "ios")))'.dependencies]
-hyper-openssl = "0.8.0"
-openssl = "0.10.28"
-
-[target.'cfg(any(target_os = "macos", target_os = "windows", target_os = "ios"))'.dependencies]
-hyper-tls = "0.4"
-native-tls = "0.2"
-
 [dev-dependencies]
 tokio = {version = "0.2", features = ["macros"]}
 bytes = "0.5"
